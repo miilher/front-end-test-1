@@ -20,7 +20,7 @@ Projeto feito em angular com angular material.
 
 ## Pontos de melhoria e discussão.
 
-# Projeto já necessita de refatoração para:
+### Projeto já necessita de refatoração para:
 
 - Componentizar data table, para ser mais viável a reutilização.
 
@@ -29,7 +29,7 @@ Projeto feito em angular com angular material.
 Obs. Hoje existe redundância, por não estar componentizado.
 
 
-# Ponto de discussão:
+### Ponto de discussão:
 
 -Pediu-se para uma rota para cada função, e foi feito, porém acredito que algunas casos no ponto de vista de UX, fazem o usúario traçar um caminho maior que o necessário.
 
