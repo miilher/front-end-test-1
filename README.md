@@ -31,11 +31,11 @@ Obs. Hoje existe redundância, por não estar componentizado.
 
 ### Ponto de discussão:
 
--Pediu-se para uma rota para cada função, e foi feito, porém acredito que algunas casos no ponto de vista de UX, fazem o usúario traçar um caminho maior que o necessário.
+- Pediu-se para uma rota para cada função, e foi feito, porém acredito que algunas casos no ponto de vista de UX, fazem o usúario traçar um caminho maior que o necessário.
 
--Não se sabe se era para utilizar o canActivate para fechar o caminho das rotas, fiz aberto, porém com o resolver, para que o link sempre faça as requisições.
+- Não se sabe se era para utilizar o canActivate para fechar o caminho das rotas, fiz aberto, porém com o resolver, para que o link sempre faça as requisições.
 
--Existem uns pacotes e arquivos a mais pois pretendia subir no heroku, mas não vou conseguir fazer esse momento.
+- Existem uns pacotes e arquivos a mais pois pretendia subir no heroku, mas não vou conseguir fazer esse momento.
 
 
 
