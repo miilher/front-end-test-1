@@ -1,0 +1,19 @@
+<div wrapper container [formGroup]="itemsForm">
+        <h1>{{getTitle(data.typeItem)}} {{ data.idItem}}</h1>
+    <div form>
+        <mat-form-field>
+            <input matInput formControlName="nameItem" placeholder="Nome do Item" [value]="nameItem">
+        </mat-form-field>
+        <mat-checkbox color="primary" class="example-margin" formControlName="doneItem" [checked]="doneItem">Finalizado</mat-checkbox>
+    </div>
+
+    <div actions>
+        <button mat-raised-button color="primary"
+            *ngIf="data.typeItem === 'editar-item' || data.typeItem === 'adicionar-item'"
+            (click)="submit(data.typeItem)">Salvar</button>
+        <!-- <button mat-raised-button color="primary" (click)="goToItems()" *ngIf="data.typeList === 'visualizar-lista'">Ver
+                itens dessa lista</button> -->
+        <button mat-raised-button (click)="goToItems()">Voltar</button>
+    </div>
+
+</div>

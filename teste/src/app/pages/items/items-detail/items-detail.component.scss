@@ -1,0 +1,22 @@
+[container] {
+    display: flex;
+    flex-direction: column;
+    > * {
+        width: 100%;
+      }
+    [form]{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      mat-form-field{
+        width: 75%;
+      }
+    }
+    [actions]  {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+  }
+  

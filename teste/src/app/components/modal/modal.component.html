@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Aviso</h1>
+<div mat-dialog-content>
+    <p>{{data.msg}}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="goTo(data.type)" *ngIf="data.type === 'warning' || data.type === 'error'">Ok</button>
+    <button mat-button (click)="setYes()" *ngIf="data.type === 'switch'">Sim</button>
+    <button mat-button (click)="onNoClick()"  *ngIf="data.type === 'switch'">Não</button>
+</div>

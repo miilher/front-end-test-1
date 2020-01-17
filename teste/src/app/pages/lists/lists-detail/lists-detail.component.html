@@ -1,0 +1,15 @@
+<div wrapper container [formGroup]="listsForm">
+        <h1>{{getTitle(data.typeList)}} {{ data.idList}}</h1>
+    <mat-form-field>
+        <input matInput formControlName="nameList" placeholder="Nome da Lista" [value]="nameList">
+    </mat-form-field>
+    <div actions>
+        <button mat-raised-button color="primary"
+            *ngIf="data.typeList === 'editar-lista' || data.typeList === 'adicionar-lista'"
+            (click)="submit(data.typeList)">Salvar</button>
+        <button mat-raised-button color="primary" (click)="goToItems()" *ngIf="data.typeList === 'visualizar-lista'">Ver
+            itens dessa lista</button>
+        <button mat-raised-button (click)="goToLists()">Voltar</button>
+    </div>
+
+</div>

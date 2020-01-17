@@ -1,0 +1,15 @@
+<div wrapper container [formGroup]="categorieForm">
+    <h1>{{getTitle(dataCategorie.typeCategorie)}} {{ dataCategorie.idCategorie}}</h1>
+    <mat-form-field>
+        <input matInput formControlName="nameCategorie" placeholder="Nome da Categoria" [value]="nameCategorie">
+    </mat-form-field>
+    <div actions>
+        <button mat-raised-button color="primary"
+            *ngIf="dataCategorie.typeCategorie === 'editar-categoria' || dataCategorie.typeCategorie === 'adicionar-categoria'"
+            (click)="submit(dataCategorie.typeCategorie)">Salvar</button>
+        <button mat-raised-button color="primary" (click)="goToListas()"
+            *ngIf="dataCategorie.typeCategorie === 'visualizar-categoria'">Ver Listas atreladas</button>
+        <button mat-raised-button (click)="goToCategories()">Voltar</button>
+    </div>
+
+</div>
