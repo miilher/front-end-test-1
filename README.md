@@ -1,76 +1,42 @@
-# Front End Test
+# TesteApi
 
-## Objetivo
+Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 
-Criar uma app "To-do list" utilizando Angular 7+ integrando com os endpoints abaixo.
+## Servidor de desenvolvimento
 
-A app deve utilizar rotas, componentes e ter uma tela para cada função.
+Rode `ng serve` para o servidor de desenvolvimento. Navegar por `http://localhost:4200/`. Recarregamento é automático para arquivos alterados e salvos.
 
-Deverá ter as opções:
 
-- Listar as categorias
-- Listar e inserir listas
-- Listar, inserir itens e marcar como "feito"
+## Build
 
-## Endpoint
+Rode `ng build` para gerar o build do projeto. Os artefatos do build ficam no diretório `dist/`. Use o `--prod` para marcar o build para produção.
 
-`https://5e1f3d7d39f7a80014a5a349.mockapi.io/api/v1/`
+## OBS.
 
-## Categories
+Projeto forkado de https://github.com/aleloauto/front-end-test.
+Com o endpoint base https://5e1f3d7d39f7a80014a5a349.mockapi.io/api/v1/.
 
-```json
-{
-  "id": "ID da categoria (Gerado)",
-  "name": "Nome da categoria"
-}
-``` 
+Projeto feito em angular com angular material.
 
-`[GET] /categories` Lista categorias
+## Pontos de melhoria e discussão.
 
-`[GET] /categories/:id` Retorna uma categoria específica
+# Projeto já necessita de refatoração para:
 
-`[POST] /categories` Insere uma categoria
+- Componentizar data table, para ser mais viável a reutilização.
 
-`[PUT] /categories/:id` Atualiza uma categoria
+- Componentizar todos os 'detail', para ser mais viável a reutilização.
 
-`[DELETE] /categories/:id` Remove uma categoria
+Obs. Hoje existe redundância, por não estar componentizado.
 
-## Lists
 
-```json
-{
-  "id": "ID da lista (Gerado)",
-  "name": "Nome da lista"
-}
-``` 
+# Ponto de discussão:
 
-`[GET] /categories/:idCategory/lists` Lista as listas de uma categoria
+-Pediu-se para uma rota para cada função, e foi feito, porém acredito que algunas casos no ponto de vista de UX, fazem o usúario traçar um caminho maior que o necessário.
 
-`[GET] /categories/:idCategory/lists/:id` Retorna uma lista específica de uma categoria
+-Não se sabe se era para utilizar o canActivate para fechar o caminho das rotas, fiz aberto, porém com o resolver, para que o link sempre faça as requisições.
 
-`[POST] /categories/:idCategory/lists` Insere uma lista em uma categoria
+-Existem uns pacotes e arquivos a mais pois pretendia subir no heroku, mas não vou conseguir fazer esse momento.
 
-`[PUT] /categories/:idCategory/lists/:id` Atualiza uma lista de uma categoria
 
-`[DELETE] /categories/:idCategory/lists/:id` Remove uma lista de categoria
 
-## Items
-
-```json
-{
-  "id": "ID do item (Gerado)",
-  "name": "Nome do item",
-  "done": true,
-}
-``` 
-
-`[GET] /categories/:idCategory/lists/:idList/items` Lista os itens de uma lista
-
-`[GET] /categories/:idCategory/lists/:idList/items/:id` Retorna um item
-
-`[POST] /categories/:idCategory/lists/:idList/items` Insere um item em uma lista
-
-`[PUT] /categories/:idCategory/lists/:idList/items/:id` Atualiza um item da lista
-
-`[DELETE] /categories/:idCategory/lists/:idList/items/:id` Remove um item
 
